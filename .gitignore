@@ -29,8 +29,13 @@ gen-external-apklibs
 tmp
 
 .DS_Store
+
 gradlew
 gradlew.bat
 local.properties
 .gradle/
-gradle/wrapper/gradle-wrapper.jar
+
+# Gradle
+jniLibs
+reports
+

@@ -26,22 +26,18 @@ android {
 
   defaultConfig {
     minSdkVersion rootProject.ext.minSdkVersion
-
-    consumerProguardFiles 'consumer-proguard-rules.txt'
   }
 }
 
 dependencies {
-  provided dep.okhttp
-  provided dep.okhttp3
+  compile project(':picasso')
+  compile dep.pollexor
   compile dep.supportAnnotations
   testCompile dep.junit
+  testCompile dep.robolectric
   testCompile dep.fest
   testCompile dep.festAndroid
-  testCompile dep.supportV4
-  testCompile dep.robolectric
-  testCompile dep.mockito
-  testCompile dep.mockWebServer
+  testCompile dep.pollexor
 }
 
 apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
